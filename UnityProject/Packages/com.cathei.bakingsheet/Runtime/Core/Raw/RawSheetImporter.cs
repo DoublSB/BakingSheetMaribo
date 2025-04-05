@@ -121,8 +121,9 @@ namespace Cathei.BakingSheet.Raw
             ISheetRow sheetRow = null;
             string rowId = null;
             int vindex = 0;
+            var startIndex = 3;
 
-            for (int pageRow = headerRows.Count; !page.IsEmptyRow(pageRow); ++pageRow)
+            for (int pageRow = startIndex; !page.IsEmptyRow(pageRow); ++pageRow)
             {
                 string idCellValue = page.GetCell(0, pageRow);
 
